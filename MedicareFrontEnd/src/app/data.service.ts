@@ -41,4 +41,10 @@ export class DataService {
   updateUser(cust:UserClass,id:number){
     return this.http.put(this.url+id,cust);
   }
+
+  //get user by email and password
+  signIn(data:any,apiUrl:any)
+  {
+    return this.http.post<any>(apiUrl,data)
+  }
 }
