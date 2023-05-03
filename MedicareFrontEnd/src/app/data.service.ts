@@ -7,7 +7,7 @@ import { UserClass } from './UserClass';
   providedIn: 'root'
 })
 export class DataService {
-  url:string="http://localhost:8082/api/user/";
+  url:string="http://localhost:5555/api/user/";
 
   //inject the DI
   constructor(private http:HttpClient) { }
@@ -27,7 +27,7 @@ export class DataService {
   }
   //create record
   create(data:any ):Observable<any>{
-    return this.http.post(this.url,data).pipe();
+    return this.http.post(this.url+"addUser",data).pipe();
   }
   //deleteById
   deleteById(id:number){

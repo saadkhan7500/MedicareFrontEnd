@@ -21,8 +21,6 @@ export class FormComponent implements OnInit {
     country:'',
     password:'',
     email:'',
-    login:'',
-
   }
   //add record
   addUser():void{
@@ -31,7 +29,6 @@ export class FormComponent implements OnInit {
       email:this.user.email,
       country:this.user.country,
       password:this.user.password,
-      login:this.user.login,
     }
     if(!data.name){
       alert('please provide name');
