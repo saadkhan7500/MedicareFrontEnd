@@ -27,7 +27,6 @@ export class EditUserComponent implements OnInit {
       name:['',Validators.required],
       email:['',Validators.required,Validators.email],
       country:['',Validators.required],
-      login:['',Validators.required],
       password:['',Validators.required],
 
     });
