@@ -15,6 +15,7 @@ import { MedDetailsComponent } from './med-details/med-details.component';
 import { MedicineFormComponent } from './medicine-form/medicine-form.component';
 import { EditMedicineComponent } from './edit-medicine/edit-medicine.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MedicineFormComponent,
     EditMedicineComponent,
     DashboardComponent,
-    
+    NavBarComponent
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

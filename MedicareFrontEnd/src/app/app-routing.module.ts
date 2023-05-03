@@ -21,6 +21,7 @@ const routes: Routes = [
   {"path":"medDetails/:id",component:MedDetailsComponent},
   {"path":"edit/:id",component:EditUserComponent},
   {"path":"edit-med/:id",component:EditMedicineComponent},
+  {"path":"",component:DashboardComponent},
   {"path":"dashboard",component:DashboardComponent}
 ];
 
