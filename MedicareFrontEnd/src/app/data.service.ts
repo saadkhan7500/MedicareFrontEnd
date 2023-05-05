@@ -39,7 +39,7 @@ export class DataService {
 
   //update user
   updateUser(cust:UserClass,id:number){
-    return this.http.put(this.url+id,cust);
+    return this.http.put(this.url+"updateUser/"+id,cust);
   }
 
   //get user by email and password

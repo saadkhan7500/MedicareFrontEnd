@@ -20,8 +20,10 @@ export class EditUserComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.id=this.activatedroute.snapshot.paramMap.get('id');
-    this.service.getUserById(Number(this.id)).subscribe(x=>this.user=x);
+    const id=this.activatedroute.snapshot.paramMap.get('id');
+    this.id=id;
+    console.log("id:",id);
+    this.service.getUserById(Number(id)).subscribe(x=>this.user=x);
 
     this.registerForm=this.builder.group({
       name:['',Validators.required],
