@@ -6,7 +6,7 @@ import { Service2Service } from '../service2.service';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent  {
 
   user:any;
   showResetForm=false;
@@ -15,6 +15,7 @@ export class NavBarComponent implements OnInit {
   searchResult:any;
 
   constructor(public service2: Service2Service){
+
 
   }
 

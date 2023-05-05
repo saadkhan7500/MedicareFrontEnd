@@ -33,7 +33,7 @@
 
 
 <nav *ngIf="this.service2.getState()=='admin'" class="navbar navbar-expand-lg navbar-light bg-secondary">
-  <a style="margin-left: 5%;" class="navbar-brand" href="#">NMS Cinemas <img style="height:40px;width: 40px;" src="..\assets\images\cinema.png"></a>
+  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;" src="..\assets\images\medicare.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -46,13 +46,13 @@
         </li>
     </ul>
     <li class="nav-item">
-      <a class="nav-link" routerLink="users">List of Users</a>
+      <a class="nav-link" routerLink="/adminArea/users">List of Users</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="medicare">Medicare</a>
+      <a class="nav-link" routerLink="/adminArea/medicare">Medicare</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="med-form">Medicine Form</a>
+      <a class="nav-link" routerLink="/adminArea/med-form">Medicine Form</a>
     </li>
       <li class="nav-item">
       <a  class="nav-link"  routerLink="/adminArea/resetPassword" >reset password</a>
@@ -76,7 +76,7 @@
 
  <!-- user nav bar -->
 <nav *ngIf="this.service2.getState()=='user' " class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a style="margin-left: 5%;" class="navbar-brand" href="#">NMS Cinemas <img style="height:40px;width: 40px;" src="..\assets\images\cinema.png"></a>
+  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;" src="..\assets\images\medicare.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

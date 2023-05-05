@@ -95,19 +95,25 @@ export class LoginComponent implements OnInit {
 
     this.service.signIn(this.user, apiUrl).subscribe(
       response => {
-        console.log(response);
-        const [, domain] = this.responseData.email.split('@');
+        const [, domain] = response.email.split('@');
 
         if (domain == 'admin.com') {
+          console.log("inside admin condition");
           this.service2.saveState("admin");
           const user = JSON.stringify(response);
-
           sessionStorage.setItem('admin', user);
+          this.router.navigate(
+            ['/adminArea'],
+          );
         }
         else {
+          console.log("inside user condition");
           this.service2.saveState("user");
           const user = JSON.stringify(response);
           sessionStorage.setItem('user', user);
+          this.router.navigate(
+            ['/userArea'],
+          );
         }
 
 
