@@ -10,6 +10,8 @@ import { MedicineFormComponent } from './medicine-form/medicine-form.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { UserAreaComponent } from './user-area/user-area.component';
+import { AdminAreaComponent } from './admin-area/admin-area.component';
 
 const routes: Routes = [
   {"path":"users",component:UserlistComponent},
@@ -22,7 +24,24 @@ const routes: Routes = [
   {"path":"edit/:id",component:EditUserComponent},
   {"path":"edit-med/:id",component:EditMedicineComponent},
   {"path":"",component:DashboardComponent},
-  {"path":"dashboard",component:DashboardComponent}
+  {"path":"dashboard",component:DashboardComponent},
+  {"path": "userArea", component: UserAreaComponent},
+  {
+    path: "adminArea", component: AdminAreaComponent,
+    children:
+      [
+
+        { path: "users", component: UserlistComponent },
+        { path: "medicare", component: MedicineComponent },
+        { path: "med-form", component: MedicineFormComponent },
+        { path: "userDetails/:id",component:UserdetailsComponent},
+        {path:  "editDetails/:id",component:EditUserComponent},
+        {path:  "medDetails/:id",component:MedDetailsComponent},
+        {path:  "editMedDetails/:id",component:EditMedicineComponent}
+      ]
+
+
+  },
 ];
 
 @NgModule({

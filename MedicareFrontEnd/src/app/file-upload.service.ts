@@ -10,7 +10,7 @@ import { MedicineClass } from './MedicineClass';
 export class FileUploadService {
   //private baseUrl = 'http://localhost:8082/api/upload/';
 
-  private baseUrl = 'http://localhost:8082/api/mymedicine/';
+  private baseUrl = 'http://localhost:5555/api/medicine/';
   constructor(private http: HttpClient) { }
 
   upload(file: File): Observable<HttpEvent<any>> {
@@ -42,16 +42,25 @@ export class FileUploadService {
     formData.append('description', data.description);
     formData.append('category', data.category);
     formData.append('price', data.price);
-    
 
 
     
     
-    return this.http.post(this.baseUrl, formData);
+    return this.http.post(this.baseUrl+"addMedicine", formData);
      
   }
   
-    
+  addMedicine(data:any)
+  {
+    return this.http.post(this.baseUrl+"addMedicine", data);
+  }
+  
+  addImageUrl(url:any,id:any)
+  {
+    console.log(url);
+    console.log(id);
+    return this.http.put(`${this.baseUrl}uploadImage/`+id,url);
+  }
 
   getFiles(): Observable<any> {
     return this.http.get(`${this.baseUrl}files`);
@@ -60,7 +69,7 @@ export class FileUploadService {
 
 
   getAllMedicine():Observable<MedicineClass[]>{
-    return this.http.get<MedicineClass[]>(this.baseUrl);
+    return this.http.get<MedicineClass[]>(this.baseUrl+"allMedicines");
   }
   //get user by id
   getMedicineById(id:number):Observable<MedicineClass>{

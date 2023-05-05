@@ -14,12 +14,12 @@ export class DataService {
 
   //get all users
   getAllUser():Observable<UserClass[]>{
-    return this.http.get<UserClass[]>(this.url);
+    return this.http.get<UserClass[]>(this.url+"allUsers");
   }
  
   //get user by id
   getUserById(id:number):Observable<UserClass>{
-    return this.http.get<UserClass>(this.url+id);
+    return this.http.get<UserClass>(this.url+"getUser/"+id);
   }
   //get user by email
   getUserByEmail(email:string):Observable<UserClass>{
@@ -39,7 +39,7 @@ export class DataService {
 
   //update user
   updateUser(cust:UserClass,id:number){
-    return this.http.put(this.url+id,cust);
+    return this.http.put(this.url+"updateUser/"+id,cust);
   }
 
   //get user by email and password

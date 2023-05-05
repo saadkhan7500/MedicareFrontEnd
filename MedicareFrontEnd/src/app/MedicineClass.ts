@@ -4,6 +4,6 @@ export class MedicineClass{
     description:string;
     category:string;
     price:number;
-    photo:string;
+    imageURL:string;
      
 }

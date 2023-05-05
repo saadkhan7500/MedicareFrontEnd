@@ -16,6 +16,8 @@ import { MedicineFormComponent } from './medicine-form/medicine-form.component';
 import { EditMedicineComponent } from './edit-medicine/edit-medicine.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { UserAreaComponent } from './user-area/user-area.component';
+import { AdminAreaComponent } from './admin-area/admin-area.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     MedicineFormComponent,
     EditMedicineComponent,
     DashboardComponent,
-    NavBarComponent
+    NavBarComponent,
+    UserAreaComponent,
+    AdminAreaComponent
 
   ],
   imports: [
