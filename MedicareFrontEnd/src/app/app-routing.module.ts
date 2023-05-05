@@ -35,7 +35,9 @@ const routes: Routes = [
         { path: "medicare", component: MedicineComponent },
         { path: "med-form", component: MedicineFormComponent },
         { path: "userDetails/:id",component:UserdetailsComponent},
-        {path:  "editDetails/:id",component:EditUserComponent}
+        {path:  "editDetails/:id",component:EditUserComponent},
+        {path:  "medDetails/:id",component:MedDetailsComponent},
+        {path:  "editMedDetails/:id",component:EditMedicineComponent}
       ]
 
 
