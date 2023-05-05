@@ -45,7 +45,7 @@ export class EditMedicineComponent implements OnInit {
       {
         this.service.updateMed(this.medicine,Number(this.id)).subscribe(x=>console.log(x));
         alert("Data Updated Successfully");
-        this.router.navigate(['medicare'])
+        this.router.navigate(['adminArea'])
       }
   }
 

@@ -73,7 +73,7 @@ export class FileUploadService {
   }
   //get user by id
   getMedicineById(id:number):Observable<MedicineClass>{
-    return this.http.get<MedicineClass>(this.baseUrl+id);
+    return this.http.get<MedicineClass>(this.baseUrl+"getMedicine/"+id);
   }
    
   //create record
@@ -83,14 +83,14 @@ export class FileUploadService {
   //deleteById
   deleteById(id:number){
     let myid=id;
-    this.http.delete(this.baseUrl+myid).subscribe(data=>{
+    this.http.delete(this.baseUrl+"deleteMedicine/"+myid).subscribe(data=>{
       return this.getAllMedicine();
     });
   }
 
   //update user
   updateMed(cust:MedicineClass,id:number){
-    return this.http.put(this.baseUrl+id,cust);
+    return this.http.put(this.baseUrl+"updateMedicine/"+id,cust);
   }
   
 }
