@@ -5,4 +5,5 @@ export class UserClass
     email:string;
     country:string;
     password:string;
+    status:string;
 }

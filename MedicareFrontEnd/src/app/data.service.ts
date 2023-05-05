@@ -14,7 +14,7 @@ export class DataService {
 
   //get all users
   getAllUser():Observable<UserClass[]>{
-    return this.http.get<UserClass[]>(this.url);
+    return this.http.get<UserClass[]>(this.url+"allUsers");
   }
  
   //get user by id
