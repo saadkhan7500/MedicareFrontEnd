@@ -24,7 +24,7 @@
             <td *ngIf="u.password!=null">{{u.password}}</td>
             <td>{{u.country}}</td>
             <td>{{u.status}}</td>
-            <td> <a href="/details/{{u.id}}"><button class="btn btn-primary"><i class="fa-solid fa-eye"></i>View</button></a> </td>
+            <td> <a href="/adminArea/userDetails/{{u.id}}"><button class="btn btn-primary"><i class="fa-solid fa-eye"></i>View</button></a> </td>
             <td><a routerLink="/edit/{{u.id}}">
                 <button class="btn btn-warning"> <i class="fa-solid fa-pen"></i>Edit</button></a></td>
             <td><button type="button"(click)='DeleteUserById(u.id)' class="btn btn-danger"><i class="fa-solid fa-trash"></i>Delete</button></td>

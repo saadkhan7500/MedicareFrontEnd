@@ -34,6 +34,7 @@ const routes: Routes = [
         { path: "users", component: UserlistComponent },
         { path: "medicare", component: MedicineComponent },
         { path: "med-form", component: MedicineFormComponent },
+        { path:  "userDetails/:id",component:UserdetailsComponent}
       ]
 
 

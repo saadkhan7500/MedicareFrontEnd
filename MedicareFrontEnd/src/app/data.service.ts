@@ -19,7 +19,7 @@ export class DataService {
  
   //get user by id
   getUserById(id:number):Observable<UserClass>{
-    return this.http.get<UserClass>(this.url+id);
+    return this.http.get<UserClass>(this.url+"getUser/"+id);
   }
   //get user by email
   getUserByEmail(email:string):Observable<UserClass>{
