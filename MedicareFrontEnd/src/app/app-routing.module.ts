@@ -12,6 +12,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { UserAreaComponent } from './user-area/user-area.component';
 import { AdminAreaComponent } from './admin-area/admin-area.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
   {"path":"users",component:UserlistComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {"path":"",component:DashboardComponent},
   {"path":"dashboard",component:DashboardComponent},
   {"path": "userArea", component: UserAreaComponent},
+  {path:"order", component:OrderComponent},
   {
     path: "adminArea", component: AdminAreaComponent,
     children:

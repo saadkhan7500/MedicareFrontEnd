@@ -1,0 +1,49 @@
+<div class="container">
+    <div  class="row">
+        <div style="background-color:rgb(255, 255, 255); height: 500px;margin-top: 3%; padding-top:30px;padding-left: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
+            <div class="row">
+              <div class="col-md-4">
+                <img style="width:300px;height:300px; border-radius: 20px;" src={{medicine.imgURL}} alt="">
+              </div>
+              <div class="col-md-3">
+
+                <div style="text-align: left;">
+                    <h3 class="text-center">Order Details</h3>
+                  <hr>
+                  <ul>
+                    <li><h3>{{medicine.name}}</h3></li>
+                    <li><h4 style="color: green;"> ●{{medicine.category}} </h4></li>
+                    <li><h4 style="color: red;">❤{{medicine.description}}</h4></li>
+                    <li><h3>{{medicine.price}} ₹  </h3></li>
+                  </ul>
+                  </div>
+              </div>
+              <div class="col-md-5">
+                <h3 class="text-center">User Details</h3>
+                <hr>
+                <ul>
+                    <li><h5>Name:- {{user.name}}</h5></li>
+                    <li><h5>Email:- {{user.email}}</h5></li>
+                    <li><h5>Country:- {{user.country}}</h5></li>
+
+                  </ul>
+              </div>
+            </div>
+            <br>
+
+            <div *ngIf="flag==true" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+            <br>
+
+            <div *ngIf="showWelcomeContent==true" class="row">
+              <h3 style="color: green;" class="text-center">Your Order has been placed 😃</h3>
+          </div>
+            <div class="row">
+             <button style="width: 200px; margin-left: 40%;" type="button" (click)="placeOrder()" class="btn btn-primary">place your order</button>
+            </div>
+          </div>
+    </div>
+</div>
+
+

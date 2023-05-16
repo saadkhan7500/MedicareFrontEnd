@@ -1,13 +1,11 @@
 <!--Body-->
 
-<div class="card-body text-primary" style="margin-top: 80px;">
+<div *ngIf="showSingIn==false" class="card-body text-primary" style="margin-top: 80px;">
    
-
-
     <!--slider-->
-    <div class="container">
+    <div *ngIf="flag==true" class="container">
        
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div  id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -54,44 +52,160 @@
         </a>
       </div>
      </div>
-    
-     
-    
-    
-    
-    </div>
-    
-    <label style="font-size: 50px;"> Latest Movies</label>
-    <div class="container">
+   <hr>
+     <section class="main-content">
+      <div class="container">
+        <h3 style="text-align: center;color: rgb(28, 28, 25);">heal your pain </h3>
+        <br>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="row" style="padding-right: 20px;" >
-             
-            <img class="d-block w-100" src="./assets/kartikeya.jpg" style="height: 500px; width: 600px;"/>
-             
-              <button type="button" class="btn btn-primary" style="height: fit-content; width:  600px;"><i class="fa fa-ticket"></i> BOOK NOW</button>    
-            
+        <!-- price breakdown starts here -->
+
+        <div style="background-color:rgb(255, 255, 255); height: 400px; padding-top:30px;padding-left: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);"
+        *ngIf="flag==false" class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img style="width:300px;height:300px; border-radius: 20px;" src={{medicine.imageURL}} alt="">
           </div>
-          
-        </div>
-        
-        <div class="col-md-6">
-          <div class="row " >
-             <img class="d-block w-100" src="./assets/rrr.jpg" style="height: 500px; width: 600px;"/>
-             <button type="button" class="btn btn-primary" style="height: fit-content; width:  600px;"><i class="fa fa-ticket"></i> BOOK NOW</button>    
-            
+          <div class="col-md-8">
+            <div style="text-align: left;">
+              <ul>
+                <li>
+                  <h3>{{medicine.name}}</h3>
+                </li>
+                <li>
+                  <h4 style="color: green;"> ●{{medicine.category}} </h4>
+                </li>
+                <li>
+                  <h4 style="color: red;">❤{{medicine.description}}</h4>
+                </li>
+                <li>
+                  <h3>{{medicine.price}} ₹</h3>
+                </li>
+    
+                <button class="btn btn-success" (click)="order()">Order Now</button>
+              </ul>
             </div>
+    
+            <button class="btn btn-danger" (click)="breakdownOff()">X</button>
+          </div>
         </div>
       </div>
-      
+
+       <!-- price breakdown ends here -->
+
+  
+       <!-- medicine card starts here  -->
+        <div class="row">
+          <div *ngFor="let medicine of medicines" class="col-sm-6 col-md-6 col-lg-3">
+            <div style="border-radius: 20px;" class="food-card bg-white rounded-lg overflow-hidden mb-4 shadow">
+              <div class="food-card_img position-relative">
+                <img style="width:100%;height:200px;" src={{medicine.imageURL}} alt="">
+                <a href="#!"><i class="far fa-heart"></i></a>
+              </div>
+              <div class="food-card_content">
+                <div class="overflow-hidden">
+                  <h4 class="food-card_title">{{medicine.name}}</h4>
+                </div>
+                <div class="food-card_bottom-section">
+                  <div class="d-flex justify-content-between">
+                    <div><span class="fa fa-fire"></span>{{medicine.description}}</div>
+                    <div>
+                      <span>{{medicine.category}}</span>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between">
+                    <div class="food-card_price">
+                      <span>{{medicine.price}}₹</span>
+                    </div>
+                  </div>
+                  <div>
+                    <button (click)="breakdown(medicine)" class="btn btn-outline-success">order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- medicine card ends here  -->
+
+      </div>
+    </section>
     </div>
-    
-    <!--Footer-->
-    
-    <div class="card-footer bg-transperent border-info">
-     @Copyright 2022 Prepared By: Nikunj Soni
+
+    <br>
+    <br>
+    <!-- signIn form start here -->
+    <div *ngIf="showSingIn==true && showSignUp==false" style="width: 500px; margin:auto;">
+      <div class="submit-form">
+          <div *ngIf="!isSubmitted">
+              
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input class="form-control" id="email" required [(ngModel)]="data.email" name="email">
+              </div>
+  
+              <div class="form-group">
+                  <label for="email">Password</label>
+                  <input class="form-control" id="password" required [(ngModel)]="data.password" name="password">
+              </div>
+  
+               
+              <button (click)="signIn()" class="btn btn-success">Login</button>
+              <div>
+                <p class="mb-0  text-center">Don't have an account? <a (click)="showSignUp=true"
+                    class="btn btn-primary  fw-bold">Sign
+                    Up</a></p>
+              </div>
+   
+
+          </div>
+          <div *ngIf="isSubmitted">
+              <h3> User Found</h3>
+          </div>
+      </div>
+  </div>
+  <!-- signIn form ends here -->
+
+<br>
+<br>
+  <!-- signUp form starts here -->
+  <div *ngIf="showSignUp==true" style="width: 500px; margin:auto;">
+    <div class="submit-form">
+        <div *ngIf="!isSubmitted">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" id="name" required [(ngModel)]="userData.name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" id="email" required [(ngModel)]="userData.email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Password</label>
+                <input class="form-control" id="password" required [(ngModel)]="userData.password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input class="form-control" id="country" required [(ngModel)]="userData.country" name="country">
+            </div>
+
+            <button (click)="addUser()" class="btn btn-success">Create</button>
+
+            
+        </div>
+        <div *ngIf="isSubmitted">
+            <h3> Data Added Successfully</h3>
+        </div>
     </div>
+</div>
+<!-- signUp form ends here -->
+    
+    
+    
     
     
     
