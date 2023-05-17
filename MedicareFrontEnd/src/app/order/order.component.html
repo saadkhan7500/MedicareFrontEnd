@@ -2,23 +2,24 @@
     <div  class="row">
         <div style="background-color:rgb(255, 255, 255); height: 500px;margin-top: 3%; padding-top:30px;padding-left: 30px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
             <div class="row">
-              <div class="col-md-4">
-                <img style="width:300px;height:300px; border-radius: 20px;" src={{medicine.imgURL}} alt="">
-              </div>
               <div class="col-md-3">
+                <img style="width:300px;height:300px; border-radius: 20px;" src={{medicine.imageURL}} alt="">
+              </div>
+              <div class="col-md-5">
 
                 <div style="text-align: left;">
                     <h3 class="text-center">Order Details</h3>
                   <hr>
                   <ul>
-                    <li><h3>{{medicine.name}}</h3></li>
-                    <li><h4 style="color: green;"> ●{{medicine.category}} </h4></li>
-                    <li><h4 style="color: red;">❤{{medicine.description}}</h4></li>
-                    <li><h3>{{medicine.price}} ₹  </h3></li>
+                    
+                    <li><h5>Name:</h5><h5>{{medicine.name}}</h5></li>
+                    <li><h5>ManufactureBy:</h5><h5>{{medicine.manufactureBy}} </h5></li>
+                    <li><h5>ConsumeType:</h5><h5>{{medicine.consumeType}}</h5></li>
+                    <li><h5>Price:</h5><h5>{{medicine.price}} ₹ </h5></li>
                   </ul>
                   </div>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <h3 class="text-center">User Details</h3>
                 <hr>
                 <ul>

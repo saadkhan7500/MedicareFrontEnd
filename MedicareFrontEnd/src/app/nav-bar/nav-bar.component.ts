@@ -22,6 +22,7 @@ export class NavBarComponent  {
   signOut()
   {
     sessionStorage.removeItem('user');
+    sessionStorage.removeItem('medicine');
     this.service2.saveState("main");
   }
 

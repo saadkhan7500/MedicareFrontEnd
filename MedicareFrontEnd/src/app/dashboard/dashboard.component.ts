@@ -64,11 +64,14 @@ export class DashboardComponent implements OnInit {
   }
   signIn() {
 
+    const medicine = JSON.stringify(this.medicine);
+    sessionStorage.setItem("medicine", medicine);
     const apiUrl = "http://localhost:5555/api/user/checkUser"
 
     this.dataService.signIn(this.data, apiUrl).subscribe(
       response => {
         const user = JSON.stringify(response);
+        console.log(user);
         sessionStorage.setItem("user", user);
         this.router.navigate(
           ['/order'],
@@ -93,6 +96,8 @@ export class DashboardComponent implements OnInit {
 
   addUser()
   {
+    const medicine = JSON.stringify(this.medicine);
+    sessionStorage.setItem("medicine", medicine);
     console.log(this.userData)
     this.dataService.create(this.userData).subscribe(
       response=>

@@ -25,8 +25,8 @@ export class EditMedicineComponent implements OnInit {
 
     this.registerForm=this.builder.group({
       //name:['',Validators.required],
-      description:['',Validators.required],
-      category:['',Validators.required],
+      manufactureBy:['',Validators.required],
+      consumeType:['',Validators.required],
       price:['',Validators.required],
        
 

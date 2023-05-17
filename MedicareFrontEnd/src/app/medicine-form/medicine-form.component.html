@@ -7,13 +7,13 @@
             </div>
 
             <div class="form-group">
-                <label for="description">Description</label>
-                <input class="form-control" id="description" required [(ngModel)]="medicine.description" name="description">
+                <label for="description">ManufactureBy</label>
+                <input class="form-control" id="manufactureBy" required [(ngModel)]="medicine.manufactureBy" name="manufactureBy">
             </div>
 
             <div class="form-group">
-                <label for="category">Category</label>
-                <input class="form-control" id="category" required [(ngModel)]="medicine.category" name="category">
+                <label for="category">ConsumeType</label>
+                <input class="form-control" id="consumeType" required [(ngModel)]="medicine.consumeType" name="consumeType">
             </div>
 
             <div class="form-group">
@@ -36,7 +36,7 @@
               
              
               
-              <button class="btn btn-success" [disabled]="!selectedFiles" (click)="addUser()">
+              <button class="btn btn-success"  (click)="addUser()">
                 Upload
               </button>
               

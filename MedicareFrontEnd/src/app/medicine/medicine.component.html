@@ -7,8 +7,8 @@
                 <th><i class="fa fa-id-card"></i>Id</th>
                 <th><i class="fa fa-image"></i>Image</th>
                 <th><i class="fa fa-user"></i>Name</th>
-                <th><i class="fa fa-pen"></i>Description</th>
-                <th><i class="fa fa-info"></i>Category</th>
+                <th><i class="fa fa-pen"></i>ManufactureBy</th>
+                <th><i class="fa fa-info"></i>ConsumeType</th>
                 <th><i class="fa fa-rupee-sign"></i>Price</th>
                 
                 <th><i class="fa fa-info-circle"></i>Details</th>
@@ -21,8 +21,8 @@
                 <td>{{m.id}}</td>
                 <td><img src="{{m.imageURL}}"   style="height: 20%; width: 40%;" ><input type="file" (change)="selectFile($event,m.id)" /></td>
                 <td>{{m.name | uppercase}}</td>
-                <td>{{m.description}}</td>
-                <td>{{m.category}}</td>
+                <td>{{m.manufactureBy}}</td>
+                <td>{{m.consumeType}}</td>
                 <td>{{m.price}}</td>
                 
                 

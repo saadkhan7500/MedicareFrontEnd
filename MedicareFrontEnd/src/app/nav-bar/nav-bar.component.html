@@ -1,31 +1,26 @@
 <nav *ngIf="this.service2.getState()=='main'" class="navbar navbar-expand-lg navbar-light bg-secondary">
-  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;" src="..\assets\images\medicare.png"></a>
+  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;"
+      src="..\assets\images\medicare.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-
-
     <ul class="navbar-nav">
       <li style="margin-left: 10%;">
-        <a routerLink=""  class="nav-link btn btn-warning text-black">Dashboard</a>
+        <a routerLink="" class="nav-link btn btn-warning text-black">Dashboard</a>
       </li>
-
-
-  </ul>
+    </ul>
     <ul style="margin-left: 70%;" class="nav navbar-nav navbar-right">
       <li>
-        <a class=" btn btn-success" routerLink="login">signIn <img style="height:20px;width: 20px;" src="..\assets\images\login.png"> </a>
+        <a class=" btn btn-success" routerLink="login">signIn <img style="height:27px;width: 20px;"
+            src="..\assets\images\login.png"> </a>
       </li>
-
-
-      <li>
-        <a class="nav-link btn btn-primary" routerLink="form">signUp <img style="height:15px;width: 20px;" src="..\assets\images\signup.png"></a>
+      <li style="margin-left: 13px;">
+        <a class="nav-link btn btn-primary" routerLink="form">signUp <img style="height:15px;width: 20px;"
+            src="..\assets\images\signup.png"></a>
       </li>
-
     </ul>
-
   </div>
 </nav>
 
@@ -33,7 +28,8 @@
 
 
 <nav *ngIf="this.service2.getState()=='admin'" class="navbar navbar-expand-lg navbar-light bg-secondary">
-  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;" src="..\assets\images\medicare.png"></a>
+  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;"
+      src="..\assets\images\medicare.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -44,26 +40,27 @@
         <li>
           <a class="nav-link btn btn-warning text-black">Admin</a>
         </li>
-    </ul>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/adminArea/users">List of Users</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/adminArea/medicare">Medicare</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/adminArea/med-form">Medicine Form</a>
-    </li>
+      </ul>
       <li class="nav-item">
-      <a  class="nav-link"  routerLink="/adminArea/resetPassword" >reset password</a>
-    </li>
+        <a class="nav-link" routerLink="/adminArea/users">List of Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/adminArea/medicare">Medicare</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/adminArea/med-form">Medicine Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/adminArea/resetPassword">reset password</a>
+      </li>
     </ul>
 
-    <ul  style="margin-left: 57%;" class="nav navbar-nav navbar-right">
+    <ul style="margin-left: 47%;" class="nav navbar-nav navbar-right">
 
 
       <li>
-        <a class="btn btn-danger" routerLink="/" (click)="signOut()">SignOut <img style="height:20px;width: 20px;" src="..\assets\images\signout.png"></a>
+        <a class="btn btn-danger" routerLink="/" (click)="signOut()">SignOut <img style="height:20px;width: 20px;"
+            src="..\assets\images\signout.png"></a>
       </li>
 
 
@@ -74,9 +71,10 @@
 
 
 
- <!-- user nav bar -->
+<!-- user nav bar -->
 <nav *ngIf="this.service2.getState()=='user' " class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;" src="..\assets\images\medicare.png"></a>
+  <a style="margin-left: 3%; " class="navbar-brand" href="#">Medicare <img style="height:40px;width: 40px;"
+      src="..\assets\images\medicare.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -84,17 +82,16 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li>
-        <a class="nav-link btn btn-warning text-black">{{user.name}}</a>
-
+        <a class="nav-link btn btn-warning">{{user.name}}</a>
       </li>
       <li>
         <a class="nav-link" routerLink="/userArea/userTicket">My Medicines</a>
       </li>
-  </ul>
-
-    <ul style="margin-left: 75%;" class="nav navbar-nav navbar-right">
+    </ul>
+    <ul style="margin-left: 65%;" class="nav navbar-nav navbar-right">
       <li>
-        <a class="btn btn-danger" routerLink="/" (click)="signOut()">SignOut <img style="height:20px;width: 20px;" src="..\assets\images\signout.png"></a>
+        <a class="btn btn-danger" routerLink="/" (click)="signOut()">SignOut <img style="height:20px;width: 20px;"
+            src="..\assets\images\signout.png"></a>
       </li>
 
 
@@ -102,9 +99,3 @@
 
   </div>
 </nav>
-
-
-
-
-
-
