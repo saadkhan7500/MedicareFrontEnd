@@ -30,8 +30,8 @@ export class MedicineFormComponent implements OnInit {
 
   medicine={
     name:'',
-    description:'',
-    category:'',
+    manufactureBy:'',
+    consumeType:'',
     price:'',
   }
 
@@ -84,8 +84,8 @@ firebaseConfig = {
   addUser():void{
     const data={
       name:this.medicine.name,
-      description:this.medicine.description,
-      category:this.medicine.category,
+      manufactureBy:this.medicine.manufactureBy,
+      consumeType:this.medicine.consumeType,
       price:this.medicine.price,
       //file:this.currentFile,
     }

@@ -10,12 +10,12 @@
     </li>
 
     <li class="list-group-item">
-        <i class="fa fa-envelope"></i><b>Description :</b> {{medicine.description}}
+        <i class="fa fa-envelope"></i><b>ManufactureBy :</b> {{medicine.manufactureBy}}
     </li>
 
     <li class="list-group-item">
-         <i class="fa fa-lock"  ></i> <b >Category :  </b>
-        {{medicine.category}}
+         <i class="fa fa-lock"  ></i> <b >ConsumeType :  </b>
+        {{medicine.consumeType}}
         </li>
 
     <li class="list-group-item">
@@ -23,7 +23,7 @@
     </li>
 
     <li class="list-group-item">
-        <i class="fa fa-image"></i><b>Image :</b> <img src="../assets/{{medicine.name| lowercase}}.png"  width="40%" height="20%" >
+        <i class="fa fa-image"></i><b>Image :</b> <img src="{{medicine.imageURL}}"  width="40%" height="20%" >
     </li>
 
     

@@ -1,24 +1,38 @@
+<br>
+<br>
+
 <section class="main-content">
-    <div class="container">
-      <h3 style="text-align: center;color: rgb(28, 28, 25);">Plan your movie</h3>
-  
-      <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-3">
+  <div class="container">
+       <!-- medicine card starts here  -->
+       <div class="row">
+        <div *ngFor="let medicine of medicines" class="col-sm-6 col-md-6 col-lg-3">
           <div style="border-radius: 20px;" class="food-card bg-white rounded-lg overflow-hidden mb-4 shadow">
             <div class="food-card_img position-relative">
-  
-              <a > <img style="width:100%;height:200px;"  alt=""></a>
+              <img style="width:100%;height:200px;" src={{medicine.imageURL}} alt="">
             </div>
             <div class="food-card_content">
               <div class="overflow-hidden">
-                <h4 class="food-card_title"></h4>
+                <h5 class="food-card_title">{{medicine.name}}</h5>
               </div>
-  
+              <div class="food-card_bottom-section">
+                <b style="font-size: 15px;">ManufactureBy:</b>
+                <div class="d-flex justify-content-between">
+                  <div style="font-size:12px ;">{{medicine.manufactureBy}}</div>
+                </div>
+                <b style="font-size: 15px;">Consume Type:</b>
+                <div style="font-size:12px;">{{medicine.consumeType}}
+                </div>
+                <div style="margin-top:10px ;" class="d-flex justify-content-between">
+                  <div class="food-card_price">
+                    <span>{{medicine.price}}₹</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-  
       </div>
-    </div>
-  </section>
-  <router-outlet></router-outlet>
+      <!-- medicine card ends here  -->
+  </div>
+</section>
+<router-outlet></router-outlet>

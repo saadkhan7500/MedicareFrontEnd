@@ -25,8 +25,8 @@ export class EditMedicineComponent implements OnInit {
 
     this.registerForm=this.builder.group({
       //name:['',Validators.required],
-      description:['',Validators.required],
-      category:['',Validators.required],
+      manufactureBy:['',Validators.required],
+      consumeType:['',Validators.required],
       price:['',Validators.required],
        
 
@@ -45,7 +45,7 @@ export class EditMedicineComponent implements OnInit {
       {
         this.service.updateMed(this.medicine,Number(this.id)).subscribe(x=>console.log(x));
         alert("Data Updated Successfully");
-        this.router.navigate(['medicare'])
+        this.router.navigate(['adminArea'])
       }
   }
 

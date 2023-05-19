@@ -1,8 +1,8 @@
 export class MedicineClass{
     id:number;
     name:string;
-    description:string;
-    category:string;
+    manufactureBy:string;
+    consumeType:string;
     price:number;
     imageURL:string;
      

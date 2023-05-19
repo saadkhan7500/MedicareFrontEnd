@@ -31,8 +31,8 @@ export class DataService {
   }
   //deleteById
   deleteById(id:number){
-    let myid=id;
-    this.http.delete(this.url+myid).subscribe(data=>{
+    let myId=id;
+    this.http.delete(this.url+"deleteUser/"+myId).subscribe(data=>{
       return this.getAllUser();
     });
   }

@@ -18,6 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserAreaComponent } from './user-area/user-area.component';
 import { AdminAreaComponent } from './admin-area/admin-area.component';
+import { OrderComponent } from './order/order.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { AdminAreaComponent } from './admin-area/admin-area.component';
     DashboardComponent,
     NavBarComponent,
     UserAreaComponent,
-    AdminAreaComponent
+    AdminAreaComponent,
+    OrderComponent,
+    FooterComponent
 
   ],
   imports: [
